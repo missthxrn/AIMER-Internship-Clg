@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Garden</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🌿 Sudoku Garden</h1>
+
+    <div class="app">
+
+        <!-- PANEL -->
+        <div class="panel">
+
+            <div class="panel-section">
+                <h3>Difficulty</h3>
+                <div class="btn-grid difficulty-grid">
+                    <button onclick="generateSudoku('easy')">Easy</button>
+                    <button onclick="generateSudoku('medium')">Medium</button>
+                    <button onclick="generateSudoku('hard')">Hard</button>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3>Game</h3>
+                <div class="btn-grid">
+                    <button onclick="generateSudoku(currentLevel)">New</button>
+                    <button onclick="resetBoard()">Reset</button>
+                    <button onclick="solveBoard()">Solve</button>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3>Rotate</h3>
+                <div class="btn-grid">
+                    <button onclick="rotateBoard(-10)">⬅</button>
+                    <button onclick="rotateBoard(10)">➡</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOARD -->
+        <div class="board-wrapper">
+            <div class="board-shadow"></div>
+            <div class="scene">
+                <div id="cube"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

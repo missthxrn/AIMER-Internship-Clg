@@ -1,0 +1,123 @@
+/* FULL SCREEN */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff6f9;
+    /* soft pastel pink */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin: 15px 0;
+    color: #6b4f4f;
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+}
+
+/* SCORE */
+.score {
+    font-size: 18px;
+    color: #6b4f4f;
+}
+
+/* BUTTONS (ICE CREAM STYLE) */
+button {
+    background: #ffd6e0;
+    /* pastel pink */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+
+    box-shadow: 0 4px #e6aebc;
+    transition: 0.1s;
+}
+
+button:hover {
+    background: #ffc9d6;
+}
+
+button:active {
+    transform: translateY(2px);
+    background: #ffe4ec;
+    box-shadow: inset 0 3px 6px #fff;
+}
+
+/* CENTER AREA */
+.board-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOARD (FIXED LIGHT CARAMEL) */
+.board {
+    width: 320px;
+    height: 320px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    padding: 15px;
+    background: #f6d7cc;
+    /* 👈 FIXED pastel caramel */
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.12),
+        inset 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* CELLS (CREAMY LIGHT) */
+.cell {
+    background: #fff5f8;
+    /* 👈 lighter, more pastel */
+    border-radius: 14px;
+
+    font-size: 40px;
+    font-weight: bold;
+    color: #6b4f4f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+}
+
+.cell:hover {
+    background: #ffe4ec;
+}
+
+/* STATUS */
+.status {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #6b4f4f;
+}
+
+/* RESET */
+.reset {
+    margin-top: 15px;
+}

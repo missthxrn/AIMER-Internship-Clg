@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ice Cream Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1> Tic Tac Toe</h1>
+
+    <div class="top-bar">
+        <div class="score">
+            X: <span id="scoreX">0</span> |
+            O: <span id="scoreO">0</span>
+        </div>
+
+        <div class="modes">
+            <button onclick="setMode('2p')">2 Player</button>
+            <button onclick="setMode('ai')">AI</button>
+        </div>
+    </div>
+
+    <!-- 👇 THIS WRAPPER FIXES YOUR LAYOUT -->
+    <div class="board-container">
+        <div class="board" id="board"></div>
+
+        <div class="status" id="status"></div>
+
+        <button class="reset" onclick="resetGame()">Reset</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

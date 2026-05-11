@@ -1,0 +1,128 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Population Census Analytics Tool</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dark">
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <h2>PopAnalytics</h2>
+
+            <!-- SEARCH -->
+            <input type="text" id="searchInput" placeholder="Search country...">
+
+            <!-- COUNTRY DROPDOWN -->
+            <select id="countrySelect">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="china">China</option>
+            </select>
+
+            <!-- YEAR FILTER -->
+            <label>Year</label>
+            <input type="range" min="2000" max="2023" value="2023" id="yearSlider">
+            <p id="yearValue">2023</p>
+
+            <!-- CHART TYPE -->
+            <label>Chart Type</label>
+            <select id="chartType">
+                <option value="bar">Bar</option>
+                <option value="line">Line</option>
+                <option value="doughnut">Doughnut</option>
+            </select>
+
+            <!-- THEME TOGGLE -->
+            <div class="toggle" onclick="toggleTheme()">
+                <div class="circle"></div>
+            </div>
+
+            <!-- EXPORT -->
+            <button onclick="exportChart()">Export Chart</button>
+
+        </div>
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <h1 id="title">India Population Dashboard</h1>
+
+            <!-- MAIN CHART -->
+            <div class="chart-card big">
+                <canvas id="mainChart"></canvas>
+            </div>
+
+            <!-- GRID -->
+            <div class="grid">
+
+                <!-- GENDER -->
+                <div class="chart-card">
+                    <h3>Gender Distribution</h3>
+                    <canvas id="genderChart"></canvas>
+                </div>
+
+                <!-- AGE -->
+                <div class="chart-card">
+                    <h3>Age Groups</h3>
+                    <canvas id="ageChart"></canvas>
+                </div>
+
+                <!-- COUNTRY -->
+                <div class="chart-card">
+                    <h3>Country Comparison</h3>
+                    <canvas id="countryChart"></canvas>
+                </div>
+
+                <!-- URBAN/RURAL -->
+                <div class="chart-card">
+                    <h3>Urban vs Rural</h3>
+                    <canvas id="urbanChart"></canvas>
+                </div>
+
+            </div>
+
+            <!-- STATS -->
+            <div class="stats">
+
+                <div class="stat-card">
+                    <h4>Total Population</h4>
+                    <p id="totalPop">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h4>Male</h4>
+                    <p id="malePop">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h4>Female</h4>
+                    <p id="femalePop">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h4>Growth</h4>
+                    <p id="growthRate">0%</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

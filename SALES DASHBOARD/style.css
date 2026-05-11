@@ -1,0 +1,213 @@
+/* BASE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(135deg,
+            #0f172a,
+            #111827);
+
+    color: white;
+}
+
+/* APP */
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(20px);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar h2 {
+    color: #d8ff62;
+    letter-spacing: 1px;
+}
+
+/* INPUTS */
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+}
+
+/* TOGGLE */
+.toggle {
+    width: 55px;
+    height: 28px;
+
+    margin-top: 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(90deg,
+            #d8ff62 50%,
+            #1f2937 50%);
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.circle {
+    width: 22px;
+    height: 22px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 3px;
+    left: 3px;
+
+    transition: 0.3s;
+}
+
+.dark .circle {
+    left: 30px;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+
+    padding: 25px;
+
+    overflow-y: auto;
+}
+
+/* TITLE */
+.main h1 {
+    color: #f8fafc;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 20px;
+}
+
+.card {
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card h4 {
+    margin: 0;
+    color: #94a3b8;
+}
+
+.card p {
+    margin-top: 12px;
+
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+.highlight {
+    background:
+        linear-gradient(135deg,
+            rgba(216, 255, 98, 0.18),
+            rgba(255, 255, 255, 0.05));
+}
+
+/* BIG CHART */
+.big {
+    margin-top: 25px;
+}
+
+/* GRID */
+.grid {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+/* CHART CARDS */
+.chart-card {
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.chart-card h3 {
+    color: #d8ff62;
+}
+
+/* CHART SIZE */
+canvas {
+    max-height: 280px;
+}
+
+/* LIGHT MODE */
+body.light {
+    background:
+        linear-gradient(135deg,
+            #f8fafc,
+            #e2e8f0);
+
+    color: #111827;
+}
+
+body.light .sidebar,
+body.light .card,
+body.light .chart-card {
+    background: rgba(255, 255, 255, 0.6);
+
+    color: #111827;
+}
+
+body.light input,
+body.light select {
+    color: #111827;
+}

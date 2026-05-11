@@ -1,0 +1,163 @@
+/* RESET + FULL SCREEN */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e7efe6;
+    color: #2f3e34;
+}
+
+/* APP TAKES FULL SCREEN */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* MAIN LAYOUT */
+.app {
+    flex: 1;
+    /* 👈 fills remaining screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 👈 vertically centered */
+    gap: 50px;
+    padding: 20px;
+}
+
+/* PANEL */
+.panel {
+    background: #dce6db;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.panel-section {
+    background: #e8efe7;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.panel-section h3 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-align: left;
+    color: #3b4d3f;
+}
+
+/* BUTTONS */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.difficulty-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #6f8f72;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #5a7a5d;
+}
+
+/* ===== BOARD LOOK ===== */
+
+/* Outer board frame (light green sides) */
+.board-wrapper {
+    background: #cfe0d2;
+    /* light green */
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.2),
+        inset 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Inner board (darker playing area) */
+.scene {
+    background: #8aa891;
+    /* darker green */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* GRID */
+#cube {
+    width: 360px;
+    height: 360px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+
+    transform: rotateX(8deg) rotateY(8deg);
+    /* subtle */
+}
+
+/* CELLS */
+.cell {
+    background: #f4f7f4;
+    border: 1px solid #6f8f72;
+    /* visible borders */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+/* HOVER */
+.cell:hover {
+    background: #e3efe6;
+}
+
+/* CLICKED / ACTIVE CELL */
+.cell.active {
+    background: #cde3d5 !important;
+}
+
+/* 3x3 GRID BOLD LINES */
+.cell:nth-child(3n) {
+    border-right: 2px solid #3f5f4a;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #3f5f4a;
+}
+
+/* Active (clicked) */
+.cell.active {
+    background: #cde3d5 !important;
+}
+
+/* Correct */
+.cell.correct {
+    background: #cfe8d8 !important;
+}
+
+/* Wrong */
+.cell.wrong {
+    background: #f2c7c7 !important;
+}

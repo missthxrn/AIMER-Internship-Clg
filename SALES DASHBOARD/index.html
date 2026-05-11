@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CHART JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dark">
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <h2>Sliide🛹</h2>
+
+            <input type="text" placeholder="Search..." class="search">
+
+            <select class="filter">
+                <option>Last 7 Days</option>
+                <option>Last Month</option>
+                <option>Last Year</option>
+            </select>
+
+            <!-- TOGGLE -->
+            <div class="toggle" onclick="toggleTheme()">
+                <div class="circle"></div>
+            </div>
+
+        </div>
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <h1>Sales Dashboard</h1>
+
+            <!-- TOP CARDS -->
+            <div class="cards">
+
+                <div class="card">
+                    <h4>Total Revenue</h4>
+                    <p>$781,800</p>
+                </div>
+
+                <div class="card">
+                    <h4>Total Orders</h4>
+                    <p>1,780</p>
+                </div>
+
+                <div class="card highlight">
+                    <h4>Growth</h4>
+                    <p>+138%</p>
+                </div>
+
+                <div class="card">
+                    <h4>Avg Order</h4>
+                    <p>$439</p>
+                </div>
+
+            </div>
+
+            <!-- BIG MAIN CHART -->
+            <div class="chart-card big">
+                <h3>Revenue Overview</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <!-- GRID -->
+            <div class="grid">
+
+                <div class="chart-card">
+                    <h3>Top Products</h3>
+                    <canvas id="productsChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Sales by Region</h3>
+                    <canvas id="regionChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Profit vs Loss</h3>
+                    <canvas id="profitChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Monthly Orders</h3>
+                    <canvas id="ordersChart"></canvas>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
